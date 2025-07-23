@@ -1,0 +1,39 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #015369;
+}
+
+header {
+  background-color: #033a7d;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+nav a {
+  margin: 0 10px;
+  color: #fff;
+  text-decoration: none;
+}
+
+section {
+  padding: 30px;
+  margin: 10px;
+}
+
+.project {
+  background: white;
+  padding: 15px;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+footer {
+  text-align: center;
+  background: #10005e;
+  color: white;
+  padding: 10px;
+}
