@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Winky+Rough&display=swap" rel="stylesheet">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>My Portfolio</title>
-
-  <!-- External Styles -->
   <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Winky+Rough&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -93,22 +91,25 @@
 <section id="contact">
   <h2>Contact Me</h2>
   <form class="contact-form" action="https://formsubmit.co/nileenas123@gmail.com" method="POST">
-    <label for="name">Name</label>
-    <input type="text" name="name" id="name" required>
+  <label for="name">Name</label>
+  <input type="text" name="name" id="name" required>
 
-    <label for="email">Email</label>
-    <input type="email" name="email" id="email" required>
+  <label for="email">Email</label>
+  <input type="email" name="email" id="email" required>
 
-    <label for="message">Message</label>
-    <textarea name="message" id="message" required></textarea>
+  <label for="message">Message</label>
+  <textarea name="message" id="message" required></textarea>
 
-    <button type="submit">Send Message</button>
+  <button type="submit">Send Message</button>
 
-    <!-- Hidden FormSubmit Settings -->
-    <input type="hidden" name="_subject" value="New message from portfolio!">
-    <input type="hidden" name="_captcha" value="false">
-    <input type="hidden" name="_template" value="box">
-  </form>
+  <!-- Optional settings -->
+  <input type="hidden" name="_subject" value="New message from portfolio!">
+  <input type="hidden" name="_captcha" value="false">
+  <input type="hidden" name="_template" value="box">
+   <input type="hidden" name="_next" value="https://nileena-sajeev.github.io/my-portfolio/?message=success">
+</form>
+
+  
 </section>
 
 <footer>
