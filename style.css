@@ -90,10 +90,10 @@ section h2 {
 .profile-photo {
   width: 150px;
   height: 150px;
-  object-fit: cover;
-  border-radius: 0; /* Square */
-  margin-bottom: 15px;
-  border: 2px solid #333;
+  object-fit: cover;      
+  border-radius: 50%;      
+  border: 3px solid #333;  
+  margin-bottom: 15px;     
 }
 
 /* Common Box Style */
