@@ -1,220 +1,88 @@
 body {
+  font-family: 'Segoe UI', sans-serif;
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
-  background: url('bg2.jpg') no-repeat center center fixed;
-  background-size: cover;
-  position: relative;
-}
-.content-box, .about-box {
-  background-color: rgba(255, 255, 255, 0.8); /* semi-transparent white */
-}
-#contact {
-  text-align: center;
-  padding: 50px 20px;
-}
-
-.contact-form {
-  max-width: 600px;
-  margin: 0 auto;
-  background-color: white;
-  border-left: 6px solid#b07897; /* pink accent bar */
-  padding: 40px 30px;
-  border-radius: 12px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
-  text-align: left;
-}
-
-.contact-form label {
-  display: block;
-  margin: 15px 0 5px;
-  color:#b07897;
-  font-weight: 600;
-}
-
-.contact-form input,
-.contact-form textarea {
-  width: 100%;
-  padding: 14px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 16px;
-  background-color: #f9f9f9;
-  box-sizing: border-box;
-}
-
-.contact-form textarea {
-  height: 120px;
-  resize: vertical;
-}
-
-.contact-form button {
-  margin-top: 20px;
-  width: 100%;
-  padding: 14px;
-  font-size: 16px;
-  background: linear-gradient(to right, #b07897,#b07897);
-  color: white;
-  border: none;
-  border-radius: 30px;
-  cursor: pointer;
-  font-weight: bold;
-  transition: background 0.3s ease;
-}
-
-.contact-form button:hover {
-  background: linear-gradient(to right, #b07897, #b07897);
-}
-
-body::before {
-  content: "";
-  position: fixed;
-  top: 0; left: 0;
-  width: 100%;
-  height: 100%;
-  backdrop-filter: blur(8px); /* Blur the background */
-  background-color: rgba(255, 255, 255, 0.2); /* Optional tint */
-  z-index: -1; /* Keeps it behind all content */
-}
-
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #9f8499;
-  color: #001239;
-}
-header h1 {
-  font-family: 'Winky Rough', serif;
-  font-size: 2.5rem;
-  margin: 0;
+  background: #fefefe;
+  color: #333;
 }
 
 header {
-  background-color: #b07897;
-  color: white;
-  padding: 20px;
+  text-align: center;
+  padding: 2rem;
+  background-color: #f7f4ef;
+  border-bottom: 1px solid #ddd;
+}
+
+header h1 {
+  margin-bottom: 0.5rem;
+  font-size: 2.5rem;
+}
+
+main, .center-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
   text-align: center;
 }
 
-.content-box {
-  background-color: #ffffff; /* pastel blue */
-  max-width: 700px;
-  margin: 0 auto 40px;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  text-align: left;
+.blog-post {
+  background: #fff;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
 }
 
-section h2 {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.education-item,
-.project {
-  margin-bottom: 20px;
-}
-
-nav a {
-  margin: 0 10px;
-  color: #fff;
+.blog-post h2 a {
   text-decoration: none;
+  color: #005577;
 }
 
-section {
-  padding: 30px;
-  margin: 10px;
-}
-
-.project {
-  background: white;
-  padding: 15px;
-  border-radius: 5px;
-  margin-top: 10px;
-}
-.about-container {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-.profile-photo {
-  width: 150px;
-  height: 150px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 3px solid #333;
-}
-#about {
-  text-align: center;
-}
-
-.about-box {
-  background-color: #ffffff; /* pastel peach, you can change */
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.profile-photo {
-  width: 150px;
-  height: 150px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 3px solid #ffffff; /* optional white border */
-  margin-bottom: 15px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 0 20px 8px rgba(176, 120, 151, 0.4); /* pastel blur */
+.blog-post h2 a:hover {
+  text-decoration: underline;
 }
 
 footer {
   text-align: center;
-   background-color: #b07897;
-  color: white;
-  padding: 10px;
-}
-.social-icons a {
-  margin: 0 10px;
-  font-size: 24px;
-  color: white; /* set icon color to white */
-  transition: transform 0.3s ease, opacity 0.3s ease;
+  padding: 1rem;
+  background: #f1f1f1;
+  border-top: 1px solid #ccc;
 }
 
-.social-icons a i {
-  color: white;
+/* Project Link Button */
+.project-link {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 16px;
+  background-color: #333;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
 }
 
-/* Optional: subtle hover effect */
-.social-icons a:hover i {
-  opacity: 0.8;
-  transform: scale(1.1);
+.project-link:hover {
+  background-color: #555;
 }
-.section-box {
-  max-width: 700px;
-  margin: 0 auto 40px;
-  background-color: white;
-  border-left: 6px solid #b07897; /* Same pink accent as Contact */
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
-  text-align: left;
+
+/* Project Detail Images */
+.center-container img {
+  width: 100%;
+  max-width: 600px;
+  margin: 20px auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  display: block;
 }
-.section-box {
-  max-width: 700px;
-  margin: 0 auto 40px;
-  background-color: white;
-  border-left: 6px solid #b07897;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
-  text-align: center; /* CENTER text inside the box */
+
+/* Optional: spacing for headings inside project page */
+.center-container h2 {
+  margin-top: 2rem;
+  font-size: 1.8rem;
+}
+.project {
+  background-color: transparent;
+  box-shadow: none;
+  border-radius: 0;
+  padding: 0;
 }
 
