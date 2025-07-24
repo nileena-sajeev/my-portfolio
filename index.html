@@ -99,11 +99,9 @@
 </section>
 
 <!-- Contact Section -->
+<!-- Contact Section -->
 <section id="contact">
   <h2>Contact Me</h2>
-
-  <!-- ✅ Success message placeholder -->
-  <div id="success" class="success-message">✅ Message sent successfully!</div>
 
   <form class="contact-form" action="https://formsubmit.co/nileenas123@gmail.com" method="POST">
     <label for="name">Name</label>
@@ -117,7 +115,7 @@
 
     <button type="submit">Send Message</button>
 
-    <!-- Hidden settings -->
+    <!-- Hidden FormSubmit settings -->
     <input type="hidden" name="_subject" value="New message from portfolio!">
     <input type="hidden" name="_captcha" value="false">
     <input type="hidden" name="_template" value="box">
@@ -129,16 +127,19 @@
   <p>© 2025 Nileena</p>
 </footer>
 
-<!-- ✅ JS to show message -->
+<!-- ✅ JS Popup Alert -->
 <script>
   const urlParams = new URLSearchParams(window.location.search);
   if (urlParams.get("message") === "success") {
-    const successDiv = document.getElementById("success");
-    if (successDiv) {
-      successDiv.style.display = "block";
-    }
+    alert("✅ Message sent successfully!");
+    // Optional: remove the message=success from URL without reload
+    window.history.replaceState({}, document.title, window.location.pathname);
   }
 </script>
+
+
+
+
 
 </body>
 </html>
