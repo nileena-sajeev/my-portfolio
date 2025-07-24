@@ -1,127 +1,14 @@
-/* Base Styles */
 body {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
   background: url('bg2.jpg') no-repeat center center fixed;
   background-size: cover;
-  color: #001239;
   position: relative;
 }
-
-/* Background blur overlay */
-body::before {
-  content: "";
-  position: fixed;
-  top: 0; left: 0;
-  width: 100%;
-  height: 100%;
-  backdrop-filter: blur(8px);
-  background-color: rgba(255, 255, 255, 0.2);
-  z-index: -1;
+.content-box, .about-box {
+  background-color: rgba(255, 255, 255, 0.8); /* semi-transparent white */
 }
-
-/* Header */
-header {
-  background-color: #b07897;
-  color: white;
-  padding: 20px;
-  text-align: center;
-}
-
-header h1 {
-  font-family: 'Winky Rough', serif;
-  font-size: 2.5rem;
-  margin: 0;
-}
-
-nav a {
-  margin: 0 10px;
-  color: #fff;
-  text-decoration: none;
-}
-
-/* Social Icons */
-.social-icons a {
-  margin: 0 10px;
-  font-size: 24px;
-  color: white;
-  transition: transform 0.3s ease, opacity 0.3s ease;
-}
-
-.social-icons a i {
-  color: white;
-}
-
-.social-icons a:hover i {
-  opacity: 0.8;
-  transform: scale(1.1);
-}
-
-/* Sections */
-section {
-  padding: 30px;
-  margin: 10px;
-}
-
-section h2 {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-/* About Section */
-#about {
-  text-align: center;
-}
-
-.about-box {
-  background-color: white;
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-/* Photo */
-.profile-photo {
-  width: 150px;
-  height: 150px;
-  object-fit: cover;      
-  border-radius: 50%;      
-  border: 3px solid #333;  
-  margin-bottom: 15px;     
-}
-
-/* Common Box Style */
-.section-box {
-  max-width: 700px;
-  margin: 0 auto 40px;
-  background-color: white;
-  border-left: 6px solid #b07897;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
-  text-align: center;
-}
-
-/* Education & Projects */
-.education-item,
-.project {
-  margin-bottom: 20px;
-}
-
-.project {
-  background: white;
-  padding: 15px;
-  border-radius: 5px;
-  margin-top: 10px;
-}
-
-/* Contact Section */
 #contact {
   text-align: center;
   padding: 50px 20px;
@@ -131,7 +18,7 @@ section h2 {
   max-width: 600px;
   margin: 0 auto;
   background-color: white;
-  border-left: 6px solid #b07897;
+  border-left: 6px solid#b07897; /* pink accent bar */
   padding: 40px 30px;
   border-radius: 12px;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
@@ -141,7 +28,7 @@ section h2 {
 .contact-form label {
   display: block;
   margin: 15px 0 5px;
-  color: #b07897;
+  color:#b07897;
   font-weight: 600;
 }
 
@@ -166,7 +53,7 @@ section h2 {
   width: 100%;
   padding: 14px;
   font-size: 16px;
-  background: #b07897;
+  background: linear-gradient(to right, #b07897,#b07897);
   color: white;
   border: none;
   border-radius: 30px;
@@ -176,13 +63,158 @@ section h2 {
 }
 
 .contact-form button:hover {
-  background: #a06989;
+  background: linear-gradient(to right, #b07897, #b07897);
 }
 
-/* Footer */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(8px); /* Blur the background */
+  background-color: rgba(255, 255, 255, 0.2); /* Optional tint */
+  z-index: -1; /* Keeps it behind all content */
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #9f8499;
+  color: #001239;
+}
+header h1 {
+  font-family: 'Winky Rough', serif;
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+header {
+  background-color: #b07897;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.content-box {
+  background-color: #ffffff; /* pastel blue */
+  max-width: 700px;
+  margin: 0 auto 40px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  text-align: left;
+}
+
+section h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.education-item,
+.project {
+  margin-bottom: 20px;
+}
+
+nav a {
+  margin: 0 10px;
+  color: #fff;
+  text-decoration: none;
+}
+
+section {
+  padding: 30px;
+  margin: 10px;
+}
+
+.project {
+  background: white;
+  padding: 15px;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+.about-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.profile-photo {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #333;
+}
+#about {
+  text-align: center;
+}
+
+.about-box {
+  background-color: #ffffff; /* pastel peach, you can change */
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-photo {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #ffffff; /* optional white border */
+  margin-bottom: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 20px 8px rgba(176, 120, 151, 0.4); /* pastel blur */
+}
+
 footer {
   text-align: center;
-  background-color: #b07897;
+   background-color: #b07897;
   color: white;
   padding: 10px;
 }
+.social-icons a {
+  margin: 0 10px;
+  font-size: 24px;
+  color: white; /* set icon color to white */
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.social-icons a i {
+  color: white;
+}
+
+/* Optional: subtle hover effect */
+.social-icons a:hover i {
+  opacity: 0.8;
+  transform: scale(1.1);
+}
+.section-box {
+  max-width: 700px;
+  margin: 0 auto 40px;
+  background-color: white;
+  border-left: 6px solid #b07897; /* Same pink accent as Contact */
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+.section-box {
+  max-width: 700px;
+  margin: 0 auto 40px;
+  background-color: white;
+  border-left: 6px solid #b07897;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  text-align: center; /* CENTER text inside the box */
+}
+
