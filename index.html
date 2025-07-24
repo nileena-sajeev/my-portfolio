@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Winky+Rough&display=swap" rel="stylesheet">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>My Portfolio</title>
+
+  <!-- External Styles -->
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Winky+Rough&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -90,17 +92,22 @@
 <!-- Contact Section -->
 <section id="contact">
   <h2>Contact Me</h2>
-  <form class="contact-form" action="mailto:nileenas123@gmail.com" method="post" enctype="text/plain">
+  <form class="contact-form" action="https://formsubmit.co/nileenas123@gmail.com" method="POST">
     <label for="name">Name</label>
-    <input type="text" id="name" placeholder="Your Name" required>
+    <input type="text" name="name" id="name" required>
 
     <label for="email">Email</label>
-    <input type="email" id="email" placeholder="Your Email" required>
+    <input type="email" name="email" id="email" required>
 
     <label for="message">Message</label>
-    <textarea id="message" placeholder="Your Message" required></textarea>
+    <textarea name="message" id="message" required></textarea>
 
     <button type="submit">Send Message</button>
+
+    <!-- Hidden FormSubmit Settings -->
+    <input type="hidden" name="_subject" value="New message from portfolio!">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_template" value="box">
   </form>
 </section>
 
