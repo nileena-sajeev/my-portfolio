@@ -113,13 +113,30 @@ section h2 {
 .project {
   margin-bottom: 20px;
 }
-
 .project {
   background: white;
   padding: 15px;
-  border-radius: 5px;
-  margin-top: 10px;
+  border-radius: 10px;
+  margin-top: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
+
+.project-link {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #b07897;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 25px;
+  transition: background 0.3s ease;
+}
+
+.project-link:hover {
+  background-color: #a06989;
+}
+
 
 /* Contact Section */
 #contact {
