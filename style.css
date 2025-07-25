@@ -79,6 +79,7 @@ footer {
   margin-top: 2rem;
   font-size: 1.8rem;
 }
+
 .project {
   background-color: transparent;
   box-shadow: none;
@@ -86,3 +87,50 @@ footer {
   padding: 0;
 }
 
+/* === New Additions for Section Styling === */
+.section-box {
+  background-color: #ffffff;
+  padding: 2rem;
+  margin: 2rem auto;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+  max-width: 800px;
+}
+
+/* Profile image */
+.profile-photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto 1rem auto;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+/* Navigation Links */
+nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #0077aa;
+}
+
+/* Social Icons */
+.social-icons {
+  margin-top: 1rem;
+}
+
+.social-icons a {
+  margin: 0 8px;
+  color: #444;
+  font-size: 1.2rem;
+}
+
+.social-icons a:hover {
+  color: #0077aa;
+}
