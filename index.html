@@ -1,145 +1,205 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Winky+Rough&display=swap" rel="stylesheet">
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
-  <style>
-    .success-message {
-      color: green;
-      background-color: #e8f5e9;
-      padding: 10px;
-      border-left: 5px solid green;
-      border-radius: 5px;
-      margin-bottom: 15px;
-      display: none;
-    }
-  </style>
-</head>
-<body>
+/* Base Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: url('bg2.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #001239;
+  position: relative;
+}
 
-<header>
-  <h1>NILEENA S</h1>
+/* Background blur overlay */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(8px);
+  background-color: rgba(255, 255, 255, 0.2);
+  z-index: -1;
+}
 
-  <nav>
-    <a href="#about">About</a>
-    <a href="#education">Education</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
-  </nav>
+/* Header */
+header {
+  background-color: #b07897;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
 
-  <div class="social-icons">
-    <a href="mailto:nileenas123@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
-    <a href="https://www.linkedin.com/in/nileena-s" target="_blank"><i class="fab fa-linkedin"></i></a>
-    <a href="https://www.instagram.com/nil.eennah/" target="_blank"><i class="fab fa-instagram"></i></a>
-  </div>
-</header>
+header h1 {
+  font-family: 'Winky Rough', serif;
+  font-size: 2.5rem;
+  margin: 0;
+}
 
-<!-- About Section -->
-<section id="about">
-  <h2>About Me</h2>
-  <div class="section-box">
-    <img src="myphoto.jpg" alt="My Photo" class="profile-photo">
-    <p>
-      Hi, I’m Nileena, a third-year Computer Science Engineering student at Muthoot Institute of Technology and Science. I love building things that work — and sometimes break them just to understand why.
-      <br><br>
-      I work with Python, C, Java, and React, and I enjoy the challenge of turning abstract ideas into functional, user-friendly software. Whether I’m debugging for hours or finally watching the code run perfectly, I’m always learning something new — and loving it.
-      <br><br>
-      When I’m not immersed in code, I’m probably imagining what the world would look like if apps could read minds (don’t worry, I’m not building one — yet).
-      <br><br>
-      Let’s connect — who knows, we might just build the next big thing.
-    </p>
-  </div>
-</section>
+nav a {
+  margin: 0 10px;
+  color: #fff;
+  text-decoration: none;
+}
 
-<!-- Education Section -->
-<section id="education">
-  <h2>Education</h2>
-  <div class="section-box">
-    <div class="education-item">
-      <h3>Class 10th</h3>
-      <p>Navy Children School, Kochi</p>
-      <p>Year: 2020–2021</p>
-      <p>85.4%</p>
-    </div>
+/* Social Icons */
+.social-icons a {
+  margin: 0 10px;
+  font-size: 24px;
+  color: white;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
 
-    <div class="education-item">
-      <h3>Class 12th</h3>
-      <p>Navy Children School, Kochi</p>
-      <p>Year: 2022–2023</p>
-      <p>84.3%</p>
-    </div>
+.social-icons a i {
+  color: white;
+}
 
-    <div class="education-item">
-      <h3>Degree</h3>
-      <p>Muthoot Institute Of Technology and Science</p>
-      <p>Year: 2023–2027</p>
-      <p>Branch: Computer Science & Engineering</p>
-      <p>CGPA: 8.40 / 10</p>
-    </div>
-  </div>
-</section>
+.social-icons a:hover i {
+  opacity: 0.8;
+  transform: scale(1.1);
+}
 
-<!-- Projects Section -->
-<section id="projects">
-  <h2>My Projects</h2>
-  <div class="section-box">
-    <div class="project">
-      <h3>Project 1</h3>
-      <p>Soon!!!</p>
-    </div>
-    <div class="project">
-      <h3>Project 2</h3>
-      <p>Soon!!!</p>
-    </div>
-  </div>
-</section>
+/* Sections */
+section {
+  padding: 30px;
+  margin: 10px;
+}
 
-<!-- Contact Section -->
-<!-- Contact Section -->
-<section id="contact">
-  <h2>Contact Me</h2>
+section h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
 
-  <form class="contact-form" action="https://formsubmit.co/nileenas123@gmail.com" method="POST">
-    <label for="name">Name</label>
-    <input type="text" name="name" id="name" required>
+/* About Section */
+#about {
+  text-align: center;
+}
 
-    <label for="email">Email</label>
-    <input type="email" name="email" id="email" required>
+.about-box {
+  background-color: white;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-    <label for="message">Message</label>
-    <textarea name="message" id="message" required></textarea>
+/* Photo */
+.profile-photo {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;      
+  border-radius: 50%;      
+  border: 3px solid #333;  
+  margin-bottom: 15px;     
+}
 
-    <button type="submit">Send Message</button>
+/* Common Box Style */
+.section-box {
+  max-width: 700px;
+  margin: 0 auto 40px;
+  background-color: white;
+  border-left: 6px solid #b07897;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
 
-    <!-- Hidden FormSubmit settings -->
-    <input type="hidden" name="_subject" value="New message from portfolio!">
-    <input type="hidden" name="_captcha" value="false">
-    <input type="hidden" name="_template" value="box">
-    <input type="hidden" name="_next" value="https://nileena-sajeev.github.io/my-portfolio/?message=success">
-  </form>
-</section>
+/* Education & Projects */
+.education-item,
+.project {
+  margin-bottom: 20px;
+}
+.project {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  margin-top: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
 
-<footer>
-  <p>© 2025 Nileena</p>
-</footer>
+.project-link {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #b07897;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 25px;
+  transition: background 0.3s ease;
+}
 
-<!-- ✅ JS Popup Alert -->
-<script>
-  const urlParams = new URLSearchParams(window.location.search);
-  if (urlParams.get("message") === "success") {
-    alert("✅ Message sent successfully!");
-    // Optional: remove the message=success from URL without reload
-    window.history.replaceState({}, document.title, window.location.pathname);
-  }
-</script>
-
-
+.project-link:hover {
+  background-color: #a06989;
+}
 
 
+/* Contact Section */
+#contact {
+  text-align: center;
+  padding: 50px 20px;
+}
 
-</body>
-</html>
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: white;
+  border-left: 6px solid #b07897;
+  padding: 40px 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.contact-form label {
+  display: block;
+  margin: 15px 0 5px;
+  color: #b07897;
+  font-weight: 600;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  background-color: #f9f9f9;
+  box-sizing: border-box;
+}
+
+.contact-form textarea {
+  height: 120px;
+  resize: vertical;
+}
+
+.contact-form button {
+  margin-top: 20px;
+  width: 100%;
+  padding: 14px;
+  font-size: 16px;
+  background: #b07897;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.contact-form button:hover {
+  background: #a06989;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  background-color: #b07897;
+  color: white;
+  padding: 10px;
+}
